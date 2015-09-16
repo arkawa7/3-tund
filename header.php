@@ -1,7 +1,7 @@
 
 <html>
 <head>
-	<title>Page title</title>
+	<title><?php echo $page_title; ?></title>
 </head>
 <body>
 <?php

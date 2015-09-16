@@ -1,4 +1,9 @@
-home
+<?php
+	$page_title = "Avaleht";
+	$page_file_name = "home.php";
+
+
+?>
 
 <?php require_once("../header.php"); ?>
 
