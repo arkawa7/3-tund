@@ -34,21 +34,64 @@
 	}
 	
 ?>
-<html>
-<head>
-	<title>Login page</title>
-</head>
-<body>
+
 	
+<?php require_once("../header.php"); ?>
 	<h2>Log in</h2>
+	
 		
 		<form action="login.php" method="post" >
 			<input name="email" type="email" placeholder="E-post"> <?php echo $email_error; ?><br><br>
 			<input name="password" type="password" placeholder="Parool"> <?php echo $password_error; ?> <br><br>
 			<input type="submit" value="Log in">
 		</form>
+
 	
 	<h2>Create user</h2>
+	<form action="login.php" method="POST" >
+		<input name="First name" placeholder="First name"> <br><br>
+		<input name="Last name" placeholder="Last name"> <br><br>
+		<input name="email" placeholder="Email"> <?php echo $email_error; ?> <br><br>
+		<input name="email" placeholder="Re-enter Email"> <?php echo $email_error; ?> <br><br>
+				<?php
+				echo "<select name='sel_date'>";
+				$i = 1;
+				while ($i <= 31) {
+					echo "<option value='" . $i . "'>$i</option>";
+					$i++;
+				}
+				echo "</select>";
+
+				echo "<select name='sel_month'>";
+				$month = array(
+					"Jan",
+					"Feb",
+					"Mar",
+					"Apr",
+					"May",
+					"Jun",
+					"Jul",
+					"Aug",
+					"Sep",
+					"Oct",
+					"Nov",
+					"Dec"
+				);
+				foreach ($month as $m) {
+					echo "<option value='" . $m . "'>$m</option>";
+				}
+				echo "</select>";
+				echo "<select name='sel_year'>";
+				$j = 1920;
+				while ($j <= 2015) {
+					echo "<option value='" . $j . "'>$j</option>";
+					$j++;
+				}
+				echo "</select>" ;
+				?> <br><br>
+		<input name="password" type="password" placeholder="Password"> <?php echo $password_error; ?> <br><br>
+		<input name="password" type="password" placeholder="Re-enter Password"> <?php echo $password_error; ?>  <br><br>
+		 Sugu?<br><input type="checkbox" name="sugu" value="mees">Mees<input type="checkbox" name="sugu" value="naine">Naine<br><br>
+		 <input type="submit" value="Registreeru"><br>
 	
-</body>
-</html>
+<?php require_once("../foooter.php"); ?>
