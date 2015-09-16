@@ -41,10 +41,10 @@
 				}	
 			}
 		
-		//keegi vajutas create nuppu
-		}elseif(isset($_POST["create"])){
+		//keegi vajutas registreeru nuppu
+		}elseif(isset($_POST["registreeru"])){
 			
-			echo "vajutas create nuppu!";
+			echo "vajutas registreeru nuppu!";
 			
 			//valideerimine create user vormile
 			//kontrollin et e-post ei ole tühi
@@ -88,10 +88,10 @@
 	
 	<h2>Create user</h2>
 	<form action="login.php" method="POST" >
-		<input name="First name" placeholder="First name">* <?php echo $name_error; ?> <br><br>
-		<input name="Last name" placeholder="Last name">* <?php echo $name_error; ?> <br><br>
-		<input name="email" placeholder="Email"> <?php echo $email_error; ?> <br><br>
-		<input name="email" placeholder="Re-enter Email"> <?php echo $email_error; ?> <br><br>
+		<input name="First name" placeholder="First name"> <?php echo $name_error; ?>*<br><br>
+		<input name="Last name" placeholder="Last name"> <?php echo $name_error; ?>* <br><br>
+		<input name="create_email" placeholder="Email"> <?php echo $email_error; ?> <br><br>
+		<input name="create_email" placeholder="Re-enter Email"> <?php echo $email_error; ?> <br><br>
 				<?php
 				echo "<select name='sel_date'>";
 				$i = 1;
@@ -128,8 +128,8 @@
 				}
 				echo "</select>" ;
 				?> <br><br>
-		<input name="password" type="password" placeholder="Password"> <?php echo $password_error; ?> <br><br>
-		<input name="password" type="password" placeholder="Re-enter Password"> <?php echo $password_error; ?>  <br><br>
+		<input name="password1" type="password" placeholder="Password"> <?php echo $password_error; ?> <br><br>
+		<input name="password1" type="password" placeholder="Re-enter Password"> <?php echo $password_error; ?>  <br><br>
 		 Sugu?<br><input type="checkbox" name="sugu" value="mees">Mees<input type="checkbox" name="sugu" value="naine">Naine<br><br>
 		 <input type="submit" value="Registreeru"><br>
 	
